@@ -32,7 +32,7 @@ output_folder = "transcripts"
 os.makedirs(output_folder, exist_ok=True)
 
 # FMP API Key
-API_KEY = "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"
+API_KEY = 
 year = 2024
 quarter =1 
 symbol = "AAPL"
