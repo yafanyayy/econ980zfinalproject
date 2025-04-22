@@ -1,0 +1,59 @@
+Regression Results: Immediate Return
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       immediate_return   R-squared:                       0.008
+Model:                            OLS   Adj. R-squared:                  0.007
+Method:                 Least Squares   F-statistic:                     4.776
+Date:                Mon, 21 Apr 2025   Prob (F-statistic):           0.000775
+Time:                        11:53:42   Log-Likelihood:                 1987.3
+No. Observations:                2309   AIC:                            -3965.
+Df Residuals:                    2304   BIC:                            -3936.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                 0.0287      0.016      1.831      0.067      -0.002       0.059
+surprise                  0.1451      0.065      2.217      0.027       0.017       0.273
+Friday_Label              0.0075      0.004      1.700      0.089      -0.001       0.016
+surprise:Friday_Label     0.0261      0.085      0.305      0.760      -0.141       0.194
+log_market_cap           -0.0024      0.001     -2.028      0.043      -0.005   -7.97e-05
+==============================================================================
+Omnibus:                      399.353   Durbin-Watson:                   1.953
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8501.218
+Skew:                          -0.036   Prob(JB):                         0.00
+Kurtosis:                      12.400   Cond. No.                         617.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Regression Results: Drift (75 Days Return)
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  drift   R-squared:                       0.064
+Model:                            OLS   Adj. R-squared:                  0.062
+Method:                 Least Squares   F-statistic:                     39.33
+Date:                Mon, 21 Apr 2025   Prob (F-statistic):           6.76e-32
+Time:                        11:53:42   Log-Likelihood:                -2363.4
+No. Observations:                2309   AIC:                             4737.
+Df Residuals:                    2304   BIC:                             4766.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                 0.8286      0.103      8.047      0.000       0.627       1.031
+surprise                  1.0955      0.431      2.543      0.011       0.251       1.940
+Friday_Label              0.2408      0.029      8.316      0.000       0.184       0.298
+surprise:Friday_Label     0.8140      0.562      1.447      0.148      -0.289       1.917
+log_market_cap           -0.0608      0.008     -7.744      0.000      -0.076      -0.045
+==============================================================================
+Omnibus:                      451.324   Durbin-Watson:                   1.898
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1316.256
+Skew:                          -1.006   Prob(JB):                    1.51e-286
+Kurtosis:                       6.103   Cond. No.                         617.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

@@ -1,0 +1,45 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\begin{document}
+
+\section*{Data Processing and Variable Specification}
+
+\subsection*{Data Source}
+The dataset is loaded from \texttt{75.xlsx}, which contains the following key variables:
+\begin{itemize}
+    \item \textbf{immediate\_return}: The cumulative abnormal return from 0 to 1 day after the announcement.
+    \item \textbf{drift\_return\_75}: The cumulative abnormal return from 2 to 75 days after the announcement.
+    \item \textbf{surprise\_quantile}: Earnings surprise quantile (1 to 11).
+    \item \textbf{Friday\_Label}: Indicator variable for whether the announcement occurred on a Friday.
+    \item \textbf{log\_market\_cap}: The log of the market capitalization of the company.
+    \item \textbf{t\_newswires}: The date of the announcement.
+\end{itemize}
+
+\subsection*{Variable Construction}
+\begin{itemize}
+    \item \textbf{Top Quantile (top\_quantile)}: Indicator variable for whether the earnings surprise quantile is 11.
+    \item \textbf{Bottom Quantile (bottom\_quantile)}: Indicator variable for whether the earnings surprise quantile is 1.
+    \item \textbf{Top Two Groups (top\_two\_groups)}: Indicator variable for whether the earnings surprise quantile is 10 or 11.
+    \item \textbf{Log Market Cap Deviation (log\_market\_cap\_dev)}: The deviation of the log market capitalization from the average log market capitalization in the same quarter.
+\end{itemize}
+
+\subsection*{Regression Specifications}
+The following OLS regression specifications are used:
+\begin{align*}
+    R^{(0,1)}_{t,k} &= \beta_0 + \beta_1 \text{top\_quantile} + \beta_2 \text{Friday\_Label} + \beta_3 (\text{top\_quantile} \times \text{Friday\_Label}) \\
+    &+ \beta_4 \text{top\_two\_groups} + \beta_5 (\text{top\_two\_groups} \times \text{Friday\_Label}) + \beta_6 \text{log\_market\_cap\_dev} + \epsilon_{t,k} \\
+    R^{(2,75)}_{t,k} &= \beta_0 + \beta_1 \text{top\_quantile} + \beta_2 \text{Friday\_Label} + \beta_3 (\text{top\_quantile} \times \text{Friday\_Label}) \\
+    &+ \beta_4 \text{top\_two\_groups} + \beta_5 (\text{top\_two\_groups} \times \text{Friday\_Label}) + \beta_6 \text{log\_market\_cap\_dev} + \epsilon_{t,k}
+\end{align*}
+
+\subsection*{Output}
+The regression results are saved as:
+\begin{itemize}
+    \item \texttt{immediate\_return\_2.tex}: LaTeX file for the immediate return regression results.
+    \item \texttt{delay\_return\_2.tex}: LaTeX file for the drift return regression results.
+\end{itemize}
+
+\end{document}
