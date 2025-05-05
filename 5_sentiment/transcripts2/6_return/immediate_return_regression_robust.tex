@@ -1,0 +1,38 @@
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dep. Variable:}         & immediate\_return & \textbf{  R-squared:         } &     0.000   \\
+\textbf{Model:}                 &        OLS        & \textbf{  Adj. R-squared:    } &    -0.001   \\
+\textbf{Method:}                &   Least Squares   & \textbf{  F-statistic:       } &    0.2478   \\
+\textbf{Date:}                  &  Sun, 04 May 2025 & \textbf{  Prob (F-statistic):} &    0.911    \\
+\textbf{Time:}                  &      11:59:21     & \textbf{  Log-Likelihood:    } &    3554.3   \\
+\textbf{No. Observations:}      &         3054      & \textbf{  AIC:               } &    -7099.   \\
+\textbf{Df Residuals:}          &         3049      & \textbf{  BIC:               } &    -7069.   \\
+\textbf{Df Model:}              &            4      & \textbf{                     } &             \\
+\textbf{Covariance Type:}       &     nonrobust     & \textbf{                     } &             \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lcccccc}
+                                & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{Intercept}              &      -0.0045  &        0.019     &    -0.242  &         0.809        &       -0.041    &        0.032     \\
+\textbf{surprise}               &      -0.0017  &        0.008     &    -0.217  &         0.828        &       -0.017    &        0.013     \\
+\textbf{friday\_label}          &      -0.0019  &        0.005     &    -0.356  &         0.722        &       -0.012    &        0.009     \\
+\textbf{surprise:friday\_label} &      -0.0839  &        0.135     &    -0.621  &         0.534        &       -0.349    &        0.181     \\
+\textbf{log\_market\_cap}       &       0.0004  &        0.001     &     0.347  &         0.728        &       -0.002    &        0.003     \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lclc}
+\textbf{Omnibus:}       & 585.124 & \textbf{  Durbin-Watson:     } &    1.912  \\
+\textbf{Prob(Omnibus):} &   0.000 & \textbf{  Jarque-Bera (JB):  } & 9103.279  \\
+\textbf{Skew:}          &   0.452 & \textbf{  Prob(JB):          } &     0.00  \\
+\textbf{Kurtosis:}      &  11.410 & \textbf{  Cond. No.          } & 1.69e+03  \\
+\bottomrule
+\end{tabular}
+%\caption{OLS Regression Results}
+\end{center}
+
+Notes: \newline
+ [1] Standard Errors assume that the covariance matrix of the errors is correctly specified. \newline
+ [2] The condition number is large, 1.69e+03. This might indicate that there are \newline
+ strong multicollinearity or other numerical problems.
